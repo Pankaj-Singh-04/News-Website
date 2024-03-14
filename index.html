@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News App</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-default" style="position: fixed;">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- <a class="navbar-brand" href="#">News App</a> -->
+                <a href="#" class="navbar-brand" onclick="reload()"><img class="logo" src="assests/newspaper.png" alt="newsLogo"></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul style="margin-left: 500px;" class="nav navbar-nav navbar-center">
+                    <!-- <li class="active"><a href="#">Home</a></li> -->
+                    <li class="nav-item" id="politics" onclick="onNavItemClick('politics')"><a href="#">Politics</a></li>
+                    <li class="nav-item" id="world" onclick="onNavItemClick('world')"><a href="#">World</a></li>
+                    <li class="nav-item" id="world" onclick="onNavItemClick('sports')"><a href="#">Sports</a></li>
+                </ul>
+                <form class="navbar-form navbar-left navbar-right">
+                    <div class="form-group">
+                        <input type="text" id="search-text" class="news-input form-control round1" type="text"  placeholder="e.g. Science">
+                    </div>
+                    <button id="search-button" class="btn btn-default btn-outline-success my-2 my-sm-0 round">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="cards-container flex" id="cards-container">
+
+        </div>
+    </main>
+    <template id="template-news-card">
+        <div class="card">
+            <div class="card-header">
+                <img id="news-img" src="assests/istockphoto-1311148884-612x612.jpg" alt="newsImage">
+            </div>
+            <div class="card-content">
+                <h3 id="news-title">This is the Title</h3>
+                <h6 class="news-source" id="news-source">End Gadget 26/08/2023</h6>
+                <p class="news-desc" id="news-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Consequatur quisquam ratione sed quas. Adipisci suscipit eius quidem deserunt natus, aspernatur sequi
+                    sint.</p>
+            </div>
+        </div>
+    </template>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnC5GkQcGZG3lO1qELD2vP8VvoTf2N" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
